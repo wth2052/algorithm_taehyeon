@@ -1,5 +1,4 @@
 import math
-import math
 def solution(hp):    
     #이 답이 왜 맞나..?
     #장군개미가 딜러 1순위
