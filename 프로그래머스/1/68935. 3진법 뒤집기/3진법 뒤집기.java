@@ -1,9 +1,9 @@
 class Solution {
     public int solution(int n) {
         Calculate calAnswer = new Calculate();
-        String terNumber = calAnswer.calTernaryNumber(n);
+        String terNumber = calAnswer.decimalToTernary(n);
         String reverseNumber = calAnswer.reverseNumber(terNumber);
-        int decimalNumber = calAnswer.calDecimalNumber(reverseNumber);
+        int decimalNumber = calAnswer.ternaryToDecimal(reverseNumber);
         return decimalNumber;
     }
 }
@@ -11,7 +11,7 @@ class Solution {
 
 class Calculate {
     //3진법
-    public String calTernaryNumber (int n) {
+    public String decimalToTernary (int n) {
         return Integer.toString(n, 3);
     }
 
@@ -20,7 +20,7 @@ class Calculate {
     }
     
     //10진법으로 변환
-    public int calDecimalNumber(String n) {
+    public int ternaryToDecimal(String n) {
         return Integer.parseInt(n, 3);
     }
 }
